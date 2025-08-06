@@ -32,3 +32,25 @@ else {
     console.error("Div com ID 'outputDiv' não encontrada.");
 }
 ;
+// Adicione um event listener de click ao botão. Tipagem para o evento de clique (MouseEvent). Dentro do listener, mude o textContent da div para "Botão clicado!".
+if (myButton && outputDiv) {
+    myButton.addEventListener('click', function (event) {
+        console.log('Botão clicado!', event);
+        outputDiv.textContent = "Botão clicado!"; // Atualiza o texto da div
+        // console.log(event.key); // TypeScript reclama, key não existe em MouseEvent
+    });
+}
+;
+// Adicione um event listener de input ou change ao input. Adicione tipagem para o evento. Dentro do listener, atualize o textContent da div com o texto atual do input (event.target as HTMLInputElement).
+if (myInput && outputDiv) {
+    myInput.addEventListener('input', function (event) {
+        var target = event.target;
+        console.log('Input alterado:', target.value);
+        outputDiv.textContent = "Texto do input: ".concat(target.value); // Atualiza o texto da div
+    });
+}
+;
+// Adicione um event listener de keydown ao document. Adicione tipagem para o evento. Dentro do listener, imprima qual tecla foi pressionada (event.key) no console.
+document.addEventListener('keydown', function (event) {
+    console.log('Tecla pressionada:', event.key);
+});
