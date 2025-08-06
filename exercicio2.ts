@@ -14,7 +14,6 @@ const products: Product[] = [
   { id: 5, name: "Caneta", price: 2, category: "Escritório" },
 ];
 
-
 // Use o método map no array products para criar um novo array contendo apenas os nomes dos produtos (um array de strings). 
 const productNames: string[] = products.map(product => product.name);
 
