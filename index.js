@@ -1,0 +1,1 @@
+// Aqui será compilado o código final do index.ts
